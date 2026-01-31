@@ -60,6 +60,17 @@ CG_ANALYST_API_KEY=...
 - Stop loss if `price < entry * 0.9` (or 0.8 in some examples)
 - Otherwise status is `monitoring`
 
+## Architecture diagram
+
+```
+flowchart LR
+    A[CoinGecko API<br/>(New Solana Pools)] --> B[Scan Module<br/>Pool Discovery]
+    B --> C[Filter Module<br/>Liquidity & FDV Checks]
+    C --> D[Execution Engine<br/>Paper / Live Trades]
+    D --> E[WebSocket Monitor<br/>Price Tracking]
+    E --> F[Exit Logic<br/>Take Profit / Stop Loss]
+```
+
 ## Notes
 
 - The WebSocket endpoint expects a subscription to `OnchainSimpleTokenPrice` and a `set_tokens` message with `network_id:token_addresses`
