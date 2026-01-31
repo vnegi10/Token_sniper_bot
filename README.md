@@ -64,11 +64,11 @@ CG_ANALYST_API_KEY=...
 
 ```mermaid
 flowchart LR
-    A[CoinGecko API<br/>(New Solana Pools)] --> B[Scan Module<br/>Pool Discovery]
-    B --> C[Filter Module<br/>Liquidity & FDV Checks]
-    C --> D[Execution Engine<br/>Paper / Live Trades]
-    D --> E[WebSocket Monitor<br/>Price Tracking]
-    E --> F[Exit Logic<br/>Take Profit / Stop Loss]
+    A["CoinGecko API (New Solana Pools)"] --> B["Scan Module: Pool Discovery"]
+    B --> C["Filter Module: Liquidity & FDV Checks"]
+    C --> D["Execution Engine: Paper / Live Trades"]
+    D --> E["WebSocket Monitor: Price Tracking"]
+    E --> F["Exit Logic: Take Profit / Stop Loss"]
 ```
 
 ## Notes
