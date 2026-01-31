@@ -62,7 +62,7 @@ CG_ANALYST_API_KEY=...
 
 ## Architecture diagram
 
-```
+mermaid```
 flowchart LR
     A[CoinGecko API<br/>(New Solana Pools)] --> B[Scan Module<br/>Pool Discovery]
     B --> C[Filter Module<br/>Liquidity & FDV Checks]
